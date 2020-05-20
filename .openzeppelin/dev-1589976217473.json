@@ -1,0 +1,112 @@
+{
+  "contracts": {
+    "TodoList": {
+      "address": "0x75fA3C03f3a92c33A66d9765B14B97E0D4884791",
+      "constructorCode": "608060405234801561001057600080fd5b50610764806100206000396000f3fe",
+      "bodyBytecodeHash": "a87b6b6ae4dba5f7e6c832657464fda2f36d540124b7612a7bab8ed92b102ab5",
+      "localBytecodeHash": "9e3a3c5fcffa626377c08d5ffdeb6e5be327bab40e229eac587893c5e9fffbd5",
+      "deployedBytecodeHash": "9e3a3c5fcffa626377c08d5ffdeb6e5be327bab40e229eac587893c5e9fffbd5",
+      "types": {
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_struct<TodoList.Task>": {
+          "id": "t_struct<TodoList.Task>",
+          "kind": "struct",
+          "label": "TodoList.Task",
+          "members": [
+            {
+              "label": "id",
+              "astId": 5,
+              "type": "t_uint256",
+              "src": "111:10:0"
+            },
+            {
+              "label": "content",
+              "astId": 7,
+              "type": "t_string",
+              "src": "132:14:0"
+            },
+            {
+              "label": "completed",
+              "astId": 9,
+              "type": "t_bool",
+              "src": "157:14:0"
+            }
+          ]
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_mapping<t_struct<TodoList.Task>>": {
+          "id": "t_mapping<t_struct<TodoList.Task>>",
+          "valueType": "t_struct<TodoList.Task>",
+          "label": "mapping(key => TodoList.Task)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "TodoList",
+          "path": "contracts\\TodoList.sol",
+          "label": "taskCount",
+          "astId": 3,
+          "type": "t_uint256",
+          "src": "55:24:0"
+        },
+        {
+          "contract": "TodoList",
+          "path": "contracts\\TodoList.sol",
+          "label": "tasks",
+          "astId": 14,
+          "type": "t_mapping<t_struct<TodoList.Task>>",
+          "src": "187:37:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [
+          {
+            "contract": "TodoList",
+            "path": "contracts\\TodoList.sol",
+            "label": "tasks",
+            "astId": 14,
+            "type": "t_mapping<t_struct<TodoList.Task>>",
+            "src": "187:37:0"
+          }
+        ],
+        "storageDiff": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "TODO/TodoList": [
+      {
+        "address": "0x0De043aCFD2A68A983Cc88777B988C55bc19C374",
+        "version": "1.0.0",
+        "implementation": "0x75fA3C03f3a92c33A66d9765B14B97E0D4884791",
+        "admin": "0x27Cb498D655d4dfF2C9BEcD8D0A3cC84fE13E702",
+        "kind": "Upgradeable"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "version": "1.0.0",
+  "proxyAdmin": {
+    "address": "0x27Cb498D655d4dfF2C9BEcD8D0A3cC84fE13E702"
+  }
+}
